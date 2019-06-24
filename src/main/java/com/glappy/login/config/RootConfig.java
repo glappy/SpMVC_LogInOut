@@ -1,5 +1,7 @@
 package com.glappy.login.config;
 
-public class RootConfig {
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
+public class RootConfig {
 }
