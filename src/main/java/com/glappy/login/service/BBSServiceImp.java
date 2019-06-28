@@ -21,7 +21,7 @@ public class BBSServiceImp implements BBSService {
 	}
 
 	@Override
-	public BoardVO findById(BoardVO boardVO) {
+	public BoardVO findById(long id) {
 		BoardVO vo=bDao.findById(id);
 		return vo;
 	}
