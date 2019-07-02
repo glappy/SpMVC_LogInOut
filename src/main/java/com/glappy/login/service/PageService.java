@@ -73,10 +73,12 @@ public class PageService {
 		
 		pageVO.setStartUpPageNo(startPage);
 		pageVO.setEndPageNo(endPage);
+		
 		if (isNowFinal)
 			pageVO.setNextPageNo(finalPage);
 		else
 			pageVO.setNextPageNo(((currPage + 1) > finalPage ? finalPage : (currPage + 1)));
+
 		pageVO.setFinalPageNo(finalPage);
 		
 		log.debug("start " + pageVO.getStartUpPageNo());
@@ -85,5 +87,4 @@ public class PageService {
 		
 		return pageVO;
 	}
-
 }

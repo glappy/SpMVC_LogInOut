@@ -16,6 +16,7 @@ public interface PageDao {
 	public List<BoardVO> selectPage(@Param("start") long start, @Param("end") long end);
 
 	@Select("select M.* from (select row_number() over (order by b_date desc, b_time desc) R, "
-			+ "b_date, b_time, b_title, b_content from tbl_board) M " + "where M.R between #{start} and #{end}")
+			+ "b_date, b_time, b_title, b_content from tbl_board) M "
+			+"where M.R between #{start} and #{end}")
 	public List<BoardVO> selectPage2(@Param("start") long start, @Param("end") long end);
 }
